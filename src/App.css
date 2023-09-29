@@ -1,0 +1,156 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.visualization-hover {
+  cursor: pointer;
+  fill: none;
+  pointer-events: all;
+}
+
+.node-circle {
+  stroke: #CCCCCC;
+  stroke-width: 1px;
+  fill: #777777;
+}
+
+.node-circle.highlighted {
+  stroke-width: 3px;
+  stroke: #B71411;
+}
+
+.node-circle.focused {
+
+}
+
+.edge-line {
+  stroke: #CCCCCC;
+  stroke-width: 1px;
+}
+
+.edge-line.highlighted {
+  stroke-width: 3px;
+  stroke: #B71411;
+}
+
+
+.tooltip-container {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 899;
+  pointer-events: none;
+}
+
+.tooltip {
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1490196078);
+  pointer-events: none;
+  position: absolute;
+  font-size: 15px;
+  line-height: 20px;
+  display: inline-block;
+  left: 0;
+  bottom: 20px;
+}
+
+.tooltip-container.tooltip-right .tooltip {
+  bottom: 0px;
+  left: auto;
+  right: 20px;
+}
+
+.tooltip-inner {
+  display: block;
+  min-width: 240px;
+  height: 100%;
+  padding: 12px 15px 9px;
+  white-space: nowrap;
+}
+
+.tooltip-inner .tooltip-name {
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
+  margin-bottom: 6px;
+  padding-bottom: 7px;
+}
+
+.tooltip-inner .tooltip-series-sector {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 6px;
+  color: #454545;
+}
+
+.tooltip-inner span {
+  display: block;
+}
+
+.tooltip-inner .tooltip-series span {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.tooltip-inner .tooltip-series .tooltip-series-legend {
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 2px;
+  background: #000;
+  border: 1px solid #CCCCCC;
+  margin: 0 4px -2px 4px;
+}
+
+.tooltip-container::after {
+  content: "";
+  position: absolute;
+  bottom: 11px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: solid 10px white;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+
+.tooltip-container.tooltip-right::after {
+  left: -21px;
+  bottom: -10px;
+  border-left: solid 10px white;
+  border-bottom: solid 10px transparent;
+  border-top: solid 10px transparent;
+}
