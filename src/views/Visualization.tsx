@@ -94,8 +94,6 @@ export const Visualization = (props: VisualizationProps) => {
         // Add a title specifying numbers of nodes
 
         // TODO don't cast to Number as that will 0 out nulls
-
-
         const circleNodes = filterToBackOfArray(nodes, isHighlightedCondition)
             .map((n: ProductNode, i: number) => {
                 const isHighlighted = isHighlightedCondition(n);
@@ -165,12 +163,7 @@ export const Visualization = (props: VisualizationProps) => {
             </div>
         )
     } else {
-        // Loading here
+        // TODO Loading image here
         return <svg></svg>
     }
-
-
-
-
-
 }
